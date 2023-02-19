@@ -10,7 +10,7 @@
                 :areas="ExpertiseAreas"/>
 
             <div class="mt-6">
-                <github-icon/> <a href="https://github.com/obake199/obake199.github.io" class="underline text-blue-400">Source Code</a>
+                <github-icon/> <a href="https://github.com/obake199/vue-resume" class="underline text-blue-300">Source Code</a>
             </div>
         </div>
     </div>
