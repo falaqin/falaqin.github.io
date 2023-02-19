@@ -1,16 +1,10 @@
 <template>
-    <div class="col p-6 rounded-lg shadow-lg bg-white text-left m-auto mt-6 max-w-2xl">
-        <h4 class="mb-2 text-2xl font-bold tracking-tight text-slate-600">
-            <slot name="title" />
-        </h4>
 
-        <slot name="body"/>
-    </div>
 </template>
 
 <script>
 export default {
-  name: "BlockView"
+  name: "Block"
 }
 </script>
 
