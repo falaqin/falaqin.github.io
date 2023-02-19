@@ -4,12 +4,12 @@ const routes = [
     {
         path: '/',
         name: 'home',
-        component: import('../views/HomeView.vue')
+        component: () => import(/* webpackChunkName: "HomeView" */ '../views/HomeView.vue')
     }
 ]
 
 const router = createRouter({
-    history: createWebHistory(process.env.BASE_URL),
+    history: createWebHistory('/'),
     routes
 })
 
