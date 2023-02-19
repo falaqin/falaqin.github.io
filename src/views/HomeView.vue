@@ -8,7 +8,6 @@
                 :intro="Introduction"/>
             <expertise-block
                 :areas="ExpertiseAreas"/>
-
             <div class="mt-6">
                 <github-icon/> <a href="https://github.com/obake199/vue-resume" class="underline text-blue-300">Source Code</a>
             </div>
