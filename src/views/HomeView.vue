@@ -8,6 +8,10 @@
                 :intro="Introduction"/>
             <expertise-block
                 :areas="ExpertiseAreas"/>
+
+            <div class="mt-6">
+                <github-icon/> <a href="https://github.com/obake199/obake199.github.io" class="underline text-blue-400">Source Code</a>
+            </div>
         </div>
     </div>
 </template>
@@ -17,9 +21,10 @@ import {ref} from "vue";
 import HeaderBlock from "@/components/HeaderBlock.vue";
 import IntroBlock from "@/components/IntroBlock.vue";
 import ExpertiseBlock from "@/components/ExpertiseBlock.vue";
+import GithubIcon from 'vue-material-design-icons/Github.vue'
 export default {
     name: 'HomeView',
-    components: { HeaderBlock, IntroBlock, ExpertiseBlock },
+    components: { GithubIcon, HeaderBlock, IntroBlock, ExpertiseBlock },
 
     setup() {
         const gmailURL = new URL('https://mail.google.com/mail/u/0/')
@@ -40,7 +45,7 @@ export default {
 
         const Introduction = ref([
             'Falaqin is a full stack web developer and a junior mobile software engineer.',
-            'A seasoned, positive-attitude, competitive software engineer that are always looking ' +
+            'A positive-attitude, competitive software engineer that are always looking ' +
             'forward for new ways to grow into a better engineer.',
             'Has a very strong history of problem solving solutions within projects, handled ' +
             'multiple projects within few months of employment, while adept at identifying solutions in ' +
