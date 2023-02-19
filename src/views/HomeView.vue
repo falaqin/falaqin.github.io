@@ -26,7 +26,7 @@ export default {
         gmailURL.searchParams.set('to', 'falaqin.work@gmail.com') // recipient email
         gmailURL.searchParams.set('su', 'Software Engineer') // subject
         gmailURL.searchParams.set('body', 'BODY') // body
-        gmailURL.searchParams.set('tf', 'cm')
+        gmailURL.searchParams.set('tf', 'cm') // fullscreen
 
         const EmailLink = ref({
             name    :   'falaqin.work@gmail.com',
