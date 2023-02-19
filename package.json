@@ -1,7 +1,7 @@
 {
   "name": "falaqin-resume",
   "version": "0.1.0",
-  "homepage": "https://obake199.github.io/vue-resume/",
+  "homepage": "https://obake199.github.io",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
