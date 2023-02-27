@@ -21,6 +21,31 @@
                             What did I do
                             <!-- TODO loop list -->
                         </p>
+                        <ul class="list-disc mb-4">
+                            <div class="pl-8">
+                                <li>
+                                    Handled multiple projects within the span of under 8 months as a one-man army.
+                                </li>
+                                <li>
+                                    Helped seniors with other big projects, implementing new functions.
+                                </li>
+                                <li>
+                                    Enhancements for existing CRM system, such as <span class="font-bold">calendar and
+                                    events system</span>.
+                                </li>
+                                <li>
+                                    Ensuring flexibility of making appointments with contacts, and track
+                                    record for each appointment.
+                                </li>
+                                <li>
+                                    Development of <span class="font-bold">rental</span> items/products.
+                                </li>
+                                <li>
+                                    The rental project has made use of
+                                    <span class="font-bold">cron jobs and server-side shell commands</span>.
+                                </li>
+                            </div>
+                        </ul>
                     </div>
                     <div class="hidden sm:block"></div> <!-- Empty grid column to fill in the gap -->
                 </div>
