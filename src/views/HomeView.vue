@@ -8,7 +8,8 @@
                 :intro="Introduction"/>
             <expertise-block
                 :areas="ExpertiseAreas"/>
-            <experience-block/>
+            <experience-block
+                :experience="Experience"/>
             <div class="mt-6">
                 <github-icon/> <a href="https://github.com/obake199/vue-resume" class="underline text-blue-300">Source Code</a>
             </div>
@@ -151,11 +152,49 @@ export default {
             },
         ])
 
+        const Experience = ref([
+            {
+                LeftView: {
+                    Company     :   'Bluevy PLT',
+                    Position    :   'Full Stack Developer',
+                    Timespan    :   '2022.3 - Present',
+                },
+                RightView: {
+                    Title       :   'Calendar Module Development',
+                    TimePosition:   '2022.7 - Present',
+                    Description :   `
+                        <p>As a developer with experience in calendar development, I have had the opportunity to create
+                        a new calendar module using Vuetify and Vue.js. In order to do this, I first had to design and
+                        implement complex tables in the database to store and manage calendar events. Additionally,
+                        I developed complex date and time logic to replicate Google's time and date format when users
+                        drag appointments, with the aim of enhancing the user interface and creating a more intuitive
+                        user experience. Through this work, I was able to apply my expertise in front-end and back-end
+                        development, and bring together a range of technical skills to deliver a high-quality calendar
+                        module that meets user needs.</p>
+                    `,
+                    Lists       :   [
+                        'Handled multiple projects.',
+                        'Helped seniors with their project for both front end and back end',
+                        'Migrated some functions from Option API to Composition API in Vue.js',
+                        'Improved caching performance by creating interface for classes',
+                        'Improved codebase by introducing MVC design pattern for blade.php pages.',
+                        'Introduced better structured functions for better readability and maintainability.',
+                        'Created new modules for enhancement by creating new directory, and uses existing controllers by inheritance.',
+                        'Created multiple templates and reusable components in Vue.js, used by colleagues.',
+                        'Patches database if there are inconsistencies by using custom Artisan command.'
+                    ],
+                    TechTitle   :   'Tech Stack',
+                    TechStack   :   ['Vue.js','Laravel','SQL','AJAX','JavaScript']
+                }
+            }
+        ])
+
         return {
             EmailLink,
             SocialLink,
             Introduction,
-            ExpertiseAreas
+            ExpertiseAreas,
+            Experience
         }
     }
 }
