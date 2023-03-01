@@ -46,12 +46,14 @@ export default {
         })
 
         const Introduction = ref([
-            'Falaqin is a full stack web developer and a junior mobile software engineer.',
-            'A positive-attitude, competitive software engineer that is always looking ' +
-            'forward for new ways to grow into a better engineer.',
-            'Has a very strong history of problem solving solutions within projects, handled ' +
-            'multiple projects within few months of employment, while adept at identifying solutions in ' +
-            'collaboration of IT team.',
+            `
+            Full stack web developer and junior mobile software engineer with a positive attitude 
+            that is always looking forward to find new ways to become a better engineer.
+            `,
+            `
+            Strong history of problem solving and finding practical solutions within projects. 
+            Experience with multiple projects within the few months of employment in collaboration with the IT team.
+            `
         ])
 
         const ExpertiseAreas = ref([
@@ -159,34 +161,70 @@ export default {
                     Position    :   'Full Stack Developer',
                     Timespan    :   '2022.3 - Present',
                 },
-                RightView: {
-                    Title       :   'Calendar Module Development',
-                    TimePosition:   '2022.7 - Present',
-                    Description :   `
-                        <p>As a developer with experience in calendar development, I have had the opportunity to create
-                        a new calendar module using Vuetify and Vue.js. In order to do this, I first had to design and
-                        implement complex tables in the database to store and manage calendar events. Additionally,
-                        I developed complex date and time logic to replicate Google's time and date format when users
-                        drag appointments, with the aim of enhancing the user interface and creating a more intuitive
-                        user experience. Through this work, I was able to apply my expertise in front-end and back-end
-                        development, and bring together a range of technical skills to deliver a high-quality calendar
-                        module that meets user needs.</p>
-                    `,
-                    Lists       :   [
-                        'Handled multiple projects.',
-                        'Helped seniors with their project for both front end and back end',
-                        'Migrated some functions from Option API to Composition API in Vue.js',
-                        'Improved caching performance by creating interface for classes',
-                        'Improved codebase by introducing MVC design pattern for blade.php pages.',
-                        'Introduced better structured functions for better readability and maintainability.',
-                        'Created new modules for enhancement by creating new directory, and uses existing controllers by inheritance.',
-                        'Created multiple templates and reusable components in Vue.js, used by colleagues.',
-                        'Patches database if there are inconsistencies by using custom Artisan command.'
-                    ],
-                    TechTitle   :   'Tech Stack',
-                    TechStack   :   ['Vue.js','Laravel','SQL','AJAX','JavaScript']
-                }
-            }
+                RightView: [
+                    {
+                        Title       :   'Bundle Product Project Development',
+                        TimePosition:   '2022.9 - Present',
+                        Description :   `
+                            <p>Created bundle product module with</p>
+                        `,
+                        Lists       :   [
+                            'Independently worked on the project before deployment.',
+                        ],
+                        TechTitle   :   'Tech Stack',
+                        TechStack   :   ['Vue.js','Laravel','SQL','AJAX','JavaScript']
+                    },
+                    {
+                        Title       :   'Appointment Booking Project Development',
+                        TimePosition:   '2022.5 - 2022.10',
+                        Description :   `
+                            <p>I have had the opportunity to create a new appointment booking project using
+                            Vuetify Calendar API and Vue.js. In order to do this, I first had to design and
+                            implement complex tables in the database to store and manage calendar events.</p>
+                            
+                            <p class="mt-1">Additionally, I developed complex date and time logic to replicate Google's time and date 
+                            format when users drag appointments, with the aim of enhancing the user interface and creating 
+                            a more intuitive user experience.</p>
+                            
+                            <p class="mt-1">Through this work, I was able to apply my expertise in front-end and back-end 
+                            development by using range of technical skills to deliver high-quality features and enhancements
+                            that meet a user's needs.</p>
+                        `,
+                        Lists       :   [
+                            'Independently worked on the project before deployment.',
+                            'Designed and implemented the calendar module using Vuetify and Vue.js.',
+                            'Designed the table database on how should the system save the events, and every other records.',
+                            'Created the project by using a modular system, a package for Laravel created by nwidart.',
+                            'Used a third party JavaScript library called "Moment.js" for the time and date formatting and calculation.'
+                        ],
+                        TechTitle   :   'Tech Stack',
+                        TechStack   :   ['Vue.js','Laravel','SQL','AJAX','JavaScript']
+                    },
+                    {
+                        Title       :   'Backend Internship',
+                        TimePosition:   '2022.5 - 2022.10',
+                        Description :   `
+                            <p>
+                                Quickly learned Laravel framework and Vues,js JavaScript framework without prior experience and 
+                                fixed all bugs inside the staging server.
+                            </p>
+                            
+                            <p class="mt-1">
+                                After I fixed my first bug during the first week of the internship, I quickly adapted and began 
+                                fixing live server bugs and issues at a fast pace.
+                            </p>
+                        `,
+                        Lists       :   [
+                            'Tested the website both front-end and back-end.',
+                            'Fixed mostly bugs from staging server.',
+                            'Fixed a lot of live server bugs and issues in a short span of time.',
+                            'Able to deploy patches very quickly for testing phase.'
+                        ],
+                        TechTitle   :   'Tech Stack',
+                        TechStack   :   ['Vue.js','Laravel','SQL','AJAX','JavaScript']
+                    }
+                ]
+            },
         ])
 
         return {

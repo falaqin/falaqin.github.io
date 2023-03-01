@@ -1,0 +1,33 @@
+Lists       :   [
+                        'Handled multiple projects.',
+                        'Helped seniors with their project for both front end and back end',
+                        'Migrated some functions from Option API to Composition API in Vue.js',
+                        'Improved caching performance by creating interface for classes',
+                        'Improved codebase by introducing MVC design pattern for blade.php pages.',
+                        'Introduced better structured functions for better readability and maintainability.',
+                        'Created new modules for enhancement by creating new directory, and uses existing controllers by inheritance.',
+                        'Created multiple templates and reusable components in Vue.js, used by colleagues.',
+                        'Patches database if there are inconsistencies by using custom Artisan command.'
+                    ],
+
+<template v-for="(exp, index) in Experience" :key="index">
+  <!-- Left View -->
+  <div class="mb-4 sm:mb-0 w-full">
+    <p class="mb-1 text-xl font-bold tracking-tight text-slate-500" v-text="exp.LeftView.Company"/>
+    <p class="mb-1 text-slate-500" v-text="exp.LeftView.Position"/>
+    <p class="text-slate-400" v-text="exp.LeftView.Timespan"/>
+  </div>
+  <!-- Right View -->
+  <template v-for="(view, index) in exp.RightView" :key="index">
+    <div class="mb-4 sm:block sm:mb-0 sm:mt-4">
+      <p class="text-xl font-bold tracking-tight text-slate-500" v-text="view.Title"/>
+      <p class="mb-1 text-slate-400" v-text="view.TimePosition"/>
+      <span v-html="view.Description"></span>
+      <p class="mb-1 text-xl font-bold tracking-tight text-slate-500 mt-2">
+What did I do
+</p>
+<ul class="list-disc mb-4">
+<div class="pl-8">
+<template v-for="list in view.Lists" :key="list">
+<li v-text="list"/>
+</template>
