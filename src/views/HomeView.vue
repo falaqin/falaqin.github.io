@@ -1,24 +1,26 @@
 <template>
     <div class="flex items-center justify-center pb-16">
         <div class="row">
-            <header-block
-                :email="EmailLink"
-                :social="SocialLink"/>
-            <intro-block
-                :intro="Introduction"/>
-            <expertise-block
-                :areas="ExpertiseAreas"/>
-            <experience-block
-                :experience="Experience"/>
-            <div class="mt-6">
-                <github-icon/> <a href="https://github.com/obake199/vue-resume" class="underline text-blue-300">Source Code</a>
+            <div>
+                <header-block
+                    :email="EmailLink"
+                    :social="SocialLink"/>
+                <intro-block
+                    :intro="Introduction"/>
+                <expertise-block
+                    :areas="ExpertiseAreas"/>
+                <experience-block
+                    :experience="Experience"/>
+                <div class="mt-6">
+                    <github-icon/> <a href="https://github.com/obake199/vue-resume" class="underline text-blue-300">Source Code</a>
+                </div>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-import {ref} from "vue";
+import {ref, onUpdated} from "vue";
 import HeaderBlock from "@/components/HeaderBlock.vue";
 import IntroBlock from "@/components/IntroBlock.vue";
 import ExpertiseBlock from "@/components/ExpertiseBlock.vue";
@@ -29,6 +31,11 @@ export default {
     components: { GithubIcon, HeaderBlock, IntroBlock, ExpertiseBlock, ExperienceBlock },
 
     setup() {
+        let show = ref(false);
+        onUpdated(() => {
+            show.value = true;
+        })
+
         const gmailURL = new URL('https://mail.google.com/mail/u/0/')
         gmailURL.searchParams.set('to', 'falaqin.work@gmail.com') // recipient email
         gmailURL.searchParams.set('su', 'Software Engineer') // subject
@@ -163,32 +170,116 @@ export default {
                 },
                 RightView: [
                     {
-                        Title       :   'Bundle Product Project Development',
-                        TimePosition:   '2022.9 - Present',
+                        Title       :   'Jobcase Module Project Development',
+                        TimePosition:   '2023.1 - 2023.2',
                         Description :   `
-                            <p>Created bundle product module with</p>
+                            <p>
+                                Helped a senior engineer for the development for the frontend dashboard for agents.
+                                The frontend dashboard was developed by implementing Vue.js inside the Laravel Blade file,
+                                to improve the user experience.
+                            </p>
+
+                            <p class='mt-1'>
+                                The goal was to make the frontend dashboard more accessible to the agents, and make it more
+                                flexible to navigate and interact with the interface.
+                            </p>
+
+                            <p class='mt-1'>
+                                Also helped with backend for common functions and increased scalability by making it more
+                                by using inheritance.
+                            </p>
                         `,
                         Lists       :   [
-                            'Independently worked on the project before deployment.',
+                            'Fixed compatibility issues of CSS for front end to implement Vue.js.',
+                            'Enhanced user experience by the use of Vue.js and Axios package.'
                         ],
                         TechTitle   :   'Tech Stack',
-                        TechStack   :   ['Vue.js','Laravel','SQL','AJAX','JavaScript']
+                        TechStack   :   ['Vue.js','Laravel Framework','SQL','JavaScript']
+                    },
+                    {
+                        Title       :   'Rental Product Project Development',
+                        TimePosition:   '2022.10 - 2023.2',
+                        Description :   `
+                            <p>
+                                This project was made with various coding pattern, such as inheritance, traits, middleware,
+                                facade, service providers, repositories for interface, and observers to observe changes in a
+                                model.
+                            </p>
+
+                            <p class="mt-2">
+                                The project was only for the backend with future plans for the frontend, 
+                                to provide flexibility and logs all the inventory transactions for clients to be able to
+                                track how much inventory they have at the time, and the possibility of renting a product 
+                                on a certain date.
+                            </p>
+
+                            <p class="mt-1">
+                                It's not only for creating orders, but also related to the appointment
+                                booking project, and it's very important that it is compatible with CRM module,
+                                and users can book an appointment with any chosen product types or rental products.
+                            </p>
+                        `,
+                        Lists       :   [
+                            'Compatible with order module and CRM module.',
+                            'Used various coding patterns to enhance scalability and performance.',
+                            'Made it modular and robust for future enhancements.',
+                            'Upgraded older related packages such as vue datepickers.',
+                            'Used repositories and observers code pattern for caching to improve performance.',
+                            'Implemented complicated time and date system by using Carbon for cron jobs.'
+                        ],
+                        TechTitle   :   'Tech Stack',
+                        TechStack   :   ['Vue.js','Laravel Framework','SQL','JavaScript', 'Ajax', 'Redis']
+                    },
+                    {
+                        Title       :   'Bundle Product Project Development',
+                        TimePosition:   '2022.9 - On hold',
+                        Description :   `
+                            <p>
+                                Created the module by using a slightly different approach from the other development,
+                                by using Laravel's database migration feature, and had to do a lot of scribbling
+                                to ensure the flow is easy to understand by the user themselves as well.
+                            </p>
+
+                            <p class="mt-1">
+                                The idea of this project was to include multiple products in one
+                                singular product container, and the backend user is able to choose which input type they would
+                                like to use for the front end. For example: dropdown menu, multiple selection, radio buttons,
+                                and checkboxes.
+                            </p>
+
+                            <p class="mt-1">This project was put on hold to prioritize other project.</p>
+                        `,
+                        Lists       :   [
+                            'Independently worked on the project.',
+                            'Created new tables with Laravel Migration.',
+                            'Reused older functions and made them modular for better reusable.',
+                            'Made it fully functional on mobile as well with Angular on Ionic framework.',
+                            'Developed with compatibility with other functions related to money and credit points transactions.'
+                        ],
+                        TechTitle   :   'Tech Stack',
+                        TechStack   :   ['Vue.js','Laravel Framework','SQL','Angular','TypeScript','Angular','Ionic Framework']
                     },
                     {
                         Title       :   'Appointment Booking Project Development',
                         TimePosition:   '2022.5 - 2022.10',
                         Description :   `
-                            <p>I have had the opportunity to create a new appointment booking project using
-                            Vuetify Calendar API and Vue.js. In order to do this, I first had to design and
-                            implement complex tables in the database to store and manage calendar events.</p>
+                            <p>
+                                I have had the opportunity to create a new appointment booking project using
+                                Vuetify Calendar API and Vue.js. In order to do this, I first had to design and
+                                implement complex tables in the database to store and manage calendar events.
+                            </p>
                             
-                            <p class="mt-1">Additionally, I developed complex date and time logic to replicate Google's time and date 
-                            format when users drag appointments, with the aim of enhancing the user interface and creating 
-                            a more intuitive user experience.</p>
+                            <p class="mt-1">
+                                Additionally, I developed complex date and time logic to replicate Google's time and date 
+                                format when users drag appointments, with the aim of enhancing the user interface and creating 
+                                a more intuitive user experience.
+                            </p>
                             
-                            <p class="mt-1">Through this work, I was able to apply my expertise in front-end and back-end 
-                            development by using range of technical skills to deliver high-quality features and enhancements
-                            that meet a user's needs.</p>
+                            <p class="mt-1">
+                                Through this work, I was able to apply my expertise in front-end and back-end 
+                                development by using range of technical skills to deliver high-quality features and enhancements
+                                that meet a user's needs.
+                            </p>
                         `,
                         Lists       :   [
                             'Independently worked on the project before deployment.',
@@ -198,7 +289,7 @@ export default {
                             'Used a third party JavaScript library called "Moment.js" for the time and date formatting and calculation.'
                         ],
                         TechTitle   :   'Tech Stack',
-                        TechStack   :   ['Vue.js','Laravel','SQL','AJAX','JavaScript']
+                        TechStack   :   ['Vue.js','Laravel Framework','SQL','Vuetify','JavaScript']
                     },
                     {
                         Title       :   'Backend Internship',
@@ -221,7 +312,7 @@ export default {
                             'Able to deploy patches very quickly for testing phase.'
                         ],
                         TechTitle   :   'Tech Stack',
-                        TechStack   :   ['Vue.js','Laravel','SQL','AJAX','JavaScript']
+                        TechStack   :   ['Vue.js','Laravel Framework','SQL','AJAX','JavaScript']
                     }
                 ]
             },
@@ -232,7 +323,8 @@ export default {
             SocialLink,
             Introduction,
             ExpertiseAreas,
-            Experience
+            Experience,
+            show
         }
     }
 }
