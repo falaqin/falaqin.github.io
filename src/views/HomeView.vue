@@ -59,7 +59,7 @@ export default {
         })
 
         const ResumeLink = ref({
-            resume  :   {link: '../assets/Falaqin - Resume.pdf', title: 'Download Resume'}
+            resume  :   {link: 'assets/Falaqin - Resume.pdf', title: 'Download Resume'}
         })
 
         const Introduction = ref([
