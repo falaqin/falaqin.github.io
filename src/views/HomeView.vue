@@ -59,7 +59,7 @@ export default {
         })
 
         const ResumeLink = ref({
-            resume  :   {link: `${process.env.BASE_URL}files/Falaqin - Resume.pdf`, title: 'Download Resume'}
+            resume  :   {link: `${process.env.BASE_URL}files/Resume.pdf`, title: 'Download Resume'}
         })
 
         const Introduction = ref([
