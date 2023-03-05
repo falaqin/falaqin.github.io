@@ -4,13 +4,16 @@
             <div>
                 <header-block
                     :email="EmailLink"
-                    :social="SocialLink"/>
+                    :social="SocialLink"
+                    :resume="ResumeLink"/>
                 <intro-block
                     :intro="Introduction"/>
                 <expertise-block
                     :areas="ExpertiseAreas"/>
                 <experience-block
                     :experience="Experience"/>
+                <education-block
+                    :education="Education"/>
                 <div class="mt-6">
                     <github-icon/> <a href="https://github.com/obake199/vue-resume" class="underline text-blue-300">Source Code</a>
                 </div>
@@ -20,22 +23,25 @@
 </template>
 
 <script>
-import {ref, onUpdated} from "vue";
+import {ref} from "vue";
 import HeaderBlock from "@/components/HeaderBlock.vue";
 import IntroBlock from "@/components/IntroBlock.vue";
 import ExpertiseBlock from "@/components/ExpertiseBlock.vue";
 import GithubIcon from 'vue-material-design-icons/Github.vue';
 import ExperienceBlock from "@/components/ExperienceBlock.vue";
+import EducationBlock from "@/components/EducationBlock.vue";
 export default {
     name: 'HomeView',
-    components: { GithubIcon, HeaderBlock, IntroBlock, ExpertiseBlock, ExperienceBlock },
+    components: { 
+        GithubIcon, 
+        HeaderBlock, 
+        IntroBlock, 
+        ExpertiseBlock, 
+        ExperienceBlock, 
+        EducationBlock 
+    },
 
     setup() {
-        let show = ref(false);
-        onUpdated(() => {
-            show.value = true;
-        })
-
         const gmailURL = new URL('https://mail.google.com/mail/u/0/')
         gmailURL.searchParams.set('to', 'falaqin.work@gmail.com') // recipient email
         gmailURL.searchParams.set('su', 'Software Engineer') // subject
@@ -50,6 +56,10 @@ export default {
         const SocialLink = ref({
             linkedin    :   {link: new URL('https://www.linkedin.com/in/falaqin/'), title: 'Falaqin'},
             github      :   {link: new URL('https://github.com/obake199'), title: 'obake199'}
+        })
+
+        const ResumeLink = ref({
+            resume  :   {link: '../assets/Falaqin - Resume.pdf', title: 'Download Resume'}
         })
 
         const Introduction = ref([
@@ -318,13 +328,55 @@ export default {
             },
         ])
 
+        const Education = ref([
+            {
+                LeftView: {
+                    School      :   'Politeknik Sultan Mizan Zainal Abidin',
+                    Timespan    :   '2019.6 - 2022.3',
+                },
+                RightView: [
+                    {
+                        Course      :   'Diploma of Digital Technology',
+                        TimePosition:   '2019.6 - 2022.3',
+                        Lists       :   [
+                            'Acquired 3.93 CGPA.',
+                            'Gained leadership role in Multimedia Club for POLITV.',
+                            'Second runner-up in CAMP21: Synergizing Literacies 2019.',
+                            'Participated in various events as Master Ceremony.'
+                        ]
+                    }
+                ]
+            },
+            {
+                LeftView: {
+                    School      :   'Sultan Ismail College',
+                    Timespan    :   '2014.1 - 2018.12',
+                },
+                RightView: [
+                    {
+                        Course      :   'Pure Science Stream (SPM)',
+                        TimePosition:   '2014.1 - 2018.12',
+                        Lists       :   [
+                            '2A (English, Mathematics).',
+                            '1B+ (Pendidikan Islam).',
+                            '1B (Bahasa Melayu).',
+                            '1C+ (Sejarah).',
+                            '1C (Physics).',
+                            '3D (Additional Mathematics, Chemistry, Biology).'
+                        ]
+                    }
+                ]
+            }
+        ])
+        
         return {
             EmailLink,
             SocialLink,
             Introduction,
             ExpertiseAreas,
             Experience,
-            show
+            Education,
+            ResumeLink
         }
     }
 }

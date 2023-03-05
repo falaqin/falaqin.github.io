@@ -49,6 +49,21 @@
                                 />
                             </p>
                         </div>
+
+                        <!-- Resume Download -->
+                        <div class="mt-6">
+                            <span class="mb-2 text-xl font-bold tracking-tight text-slate-600" v-text="'Resume'"/>
+
+                            <p v-if="ResumeLink.resume">
+                                <AccountCircleIcon/>&nbsp;
+                                <a
+                                    :href="ResumeLink.resume.link"
+                                    class="underline"
+                                    v-text="ResumeLink.resume.title"
+                                    download
+                                />
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -63,18 +78,20 @@ import EmailIcon from 'vue-material-design-icons/Email.vue'
 import LinkedinIcon from 'vue-material-design-icons/Linkedin.vue'
 import GithubIcon from 'vue-material-design-icons/Github.vue'
 import HomeIcon from 'vue-material-design-icons/Home.vue'
+import AccountCircleIcon from 'vue-material-design-icons/AccountCircle.vue'
 import 'vue-material-design-icons/styles.css';
 export default {
     name: "HeaderBlock",
-    components: { BlockView, EmailIcon, LinkedinIcon, GithubIcon, HomeIcon },
-    props: ['email', 'social'],
+    components: { BlockView, EmailIcon, LinkedinIcon, GithubIcon, HomeIcon, AccountCircleIcon },
+    props: ['email', 'social', 'resume'],
 
     setup(props) {
         let EmailLink = ref(props.email)
         let SocialLink = ref(props.social)
+        let ResumeLink = ref(props.resume)
 
         return {
-            EmailLink, SocialLink
+            EmailLink, SocialLink, ResumeLink
         }
     }
 }
