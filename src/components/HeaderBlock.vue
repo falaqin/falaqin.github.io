@@ -57,7 +57,7 @@
                             <p v-if="ResumeLink.resume">
                                 <AccountCircleIcon/>&nbsp;
                                 <a
-                                    :href="`<%= BASE_URL %>${ResumeLink.resume.link}`"
+                                    :href="`${ResumeLink.resume.link}`"
                                     class="underline"
                                     v-text="ResumeLink.resume.title"
                                     download
