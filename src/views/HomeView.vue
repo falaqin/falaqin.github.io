@@ -75,6 +75,12 @@ export default {
 
         const ExpertiseAreas = ref([
             {title   :   'SQL'},
+            {title   :   'PHP'},
+            {title   :   'AJAX'},
+            {title   :   'jQuery'},
+            {title   :   'Javascript'},
+            {title   :   'Ionic Framework'},
+            {title   :   'Angular'},
             {
                 title   :   'Vue.js',
                 desc    :
@@ -117,10 +123,6 @@ export default {
                     </ul>
                 `
             },
-            {title   :   'PHP'},
-            {title   :   'AJAX'},
-            {title   :   'jQuery'},
-            {title   :   'Javascript'},
             {
                 title: 'Typescript',
                 desc:
